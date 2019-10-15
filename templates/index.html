@@ -1,0 +1,17 @@
+<html>
+  <head>
+      <title> Request Example </title>
+      </head>
+      <body>
+          City: <input type= "text" name = "location">
+          <input type = "submit">
+            <div class="container">
+                <form class="Printing temperature" method="POST" action="{{ url_for('main.temperature_post')}}"></form>
+              {% for temp in temps %}
+              <h3> Temperature forecast between {{temp.fromDate}} and {{temp.toDate}} is {{ temp.temperature }} degrees. </h1>
+              {% endfor %}
+            </div>
+            </body>
+          <html>
+      </body>
+</html>

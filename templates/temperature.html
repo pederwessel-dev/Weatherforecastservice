@@ -1,0 +1,12 @@
+<html>
+  <head> <title> Current temperature </title> </head>
+  <body>
+    <div class="container">
+      <form class="Printing temperature" method="POST" action="{{ url_for('main.temperature_post')}}">
+
+    {% for temp in temps %}
+    <h1> Temperature forecast between {{temp.fromDate}} and {{temp.toDate}} is {{ temp.temperature }} degrees. </h1>
+    {% endfor %}
+  </div>
+  </body>
+<html>
